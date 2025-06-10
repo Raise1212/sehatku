@@ -1,0 +1,140 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap');
+
+body, html, #root {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  width: 100%;
+  font-family: 'Poppins', sans-serif;
+  background-color: #f0f8ff;
+}
+
+.app-container {
+  width: 100vw;
+  height: 100vh;
+  background-image: url('./backround1.jpg');
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: cover;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  padding-top: 4rem;
+}
+
+.app-container::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background-color: rgba(0, 68, 128, 0.4);
+  z-index: 0;
+}
+
+.page-title {
+  position: absolute;
+  top: 1.5rem;
+  font-size: 3.5rem;
+  color: white;
+  font-weight: 700;
+  text-shadow: 2px 2px 5px rgba(0,0,0,0.4);
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  background-color: rgba(0, 119, 182, 0.8);
+  padding: 0.5rem 2rem;
+  border-radius: 20px;
+  z-index: 1;
+}
+
+.content-box {
+  z-index: 1;
+  background: rgba(255, 255, 255, 0.9);
+  padding: 3rem;
+  border-radius: 30px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 2rem;
+  max-width: 900px;
+  width: 90%;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+}
+
+.text-section {
+  flex: 1;
+  text-align: left;
+}
+
+.main-title {
+  font-size: 2.5rem;
+  color: #0077b6;
+  margin-bottom: 1rem;
+  font-weight: 700;
+}
+
+.subtitle {
+  font-size: 1.2rem;
+  color: #333;
+  margin-bottom: 1.5rem;
+}
+
+.rfid-box {
+  background-color: #d0f0fd;
+  padding: 1.2rem;
+  border-radius: 15px;
+  font-size: 1.3rem;
+  color: #005f87;
+  font-weight: 600;
+  border: none;
+  width: 100%;
+  max-width: 400px;
+  text-align: center;
+  box-shadow: inset 0 0 5px rgba(0,0,0,0.1);
+  outline: none;
+  transition: box-shadow 0.3s ease;
+}
+
+.rfid-box:focus {
+  box-shadow: 0 0 0 3px rgba(0, 119, 182, 0.3);
+}
+
+/* Hilangkan spinner di input type number */
+.rfid-box::-webkit-outer-spin-button,
+.rfid-box::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+.rfid-box[type=number] {
+  -moz-appearance: textfield;
+}
+
+.image-container {
+  flex-shrink: 0;
+}
+
+.image-container img {
+  width: 350px;
+  height: auto;
+  border-radius: 20px;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+}
+
+@media (max-width: 768px) {
+  .content-box {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .image-container img {
+    width: 280px;
+  }
+
+  .main-title {
+    font-size: 2rem;
+  }
+
+  .page-title {
+    font-size: 2.5rem;
+  }
+}
